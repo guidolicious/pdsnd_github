@@ -1,4 +1,5 @@
 # Gary Fudala Bikeshare Working Version 3
+# Comment for GitHub Improve Documentation Section III
 
 import time
 import pandas as pd
@@ -46,13 +47,13 @@ def get_filters():
     while True:
         days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'all']
         day = input("\nWhich day of the week would you like to assess? Choose between: 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', or 'Saturday'? Type 'All' to select all 7 days \n").lower()
-              
+
         if day in days:
             break
-            
+
         else:
             print("\nPlease enter a valid day, or enter 'All' to select every day of the week")
-      
+
     print('-'*40)
     print("\nThe chosen filters are: city = {}, month(s) = {}, day(s) of week = {}\n".format(city, month, day))
     print('-'*40)
@@ -74,11 +75,11 @@ def load_data(city, month, day):
     """
 
     # NOTE: Read chosen city's csv file into dataframe
-    
+
     df = pd.read_csv(CITY_DATA[city])
-    
+
     # NOTE: need to gather month and day of week - but also need to convert Start Time into datetime datatype
-    
+
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     # NOTE: determine month and day of week from Start Time, and create dataframes
     df['month'] = df['Start Time'].dt.month
@@ -87,28 +88,28 @@ def load_data(city, month, day):
     #print(df) - tz error has been corrected
 
     # NOTE: If necessary, filter by month - so entire city data is not computed
-       
+
     if month != 'all':
         month = month.title()
         months = ['January','February','March','April','May','June']
         # NOTE: index months list to obtain proper location within list, and increment
         month = months.index(month) + 1
-        
+
         # NOTE: create a new dataframe from filtered monthly data
         df = df[df['month'] == month]
         #print(df) - dataframe successfully filtered by month
-        
+
     # NOTE: if necessary, filter by day of week - so entire month is not computed
-     
+
     if day != 'all':
-    
+
     # NOTE: create new dataframe based upon day of week - dataframe was not showing selected day of week, so using pandas DataFrame.loc command
         #df = df[df['day_of_week'] == day.title()] - code was not populating correct day of week within dataframe
         df = df.loc[df['day_of_week'] == day.title()]
         #print(df) - dataframe successfully filtered by day of week
-        
-    return df  
-    
+
+    return df
+
 
 def time_stats(df, month, day):
 
@@ -120,14 +121,14 @@ def time_stats(df, month, day):
     # TO DO: display the most common month
 
     if month == 'all':
-    
+
         popular_month = df['month'].mode()[0]
     # NOTE: no data between July and December within all 3 csv files
         months = ['january','february','march','april','may','june']
     # NOTE: remember to eliminate 'All' or 'all' from entries, and need to subtract 1 since months list indexed from 0 to 5
         popular_month = months[popular_month - 1]
         print("The most popular month, based upon the selected criteria, is:", (popular_month).title())
-    
+
 
     # TO DO: display the most common day of week
 
@@ -136,7 +137,7 @@ def time_stats(df, month, day):
         popular_day = df['day_of_week'].mode()[0]
         print("The most popular day of the week, based upon the selected critria, is: " + popular_day)
 
-     
+
     # TO DO: display the most common start hour
 
     df['start_hour'] = df['Start Time'].dt.hour
@@ -186,15 +187,15 @@ def trip_duration_stats(df):
     # TO DO: display total travel time
 
     total_time = df['Trip Duration'].sum()
-    
-    print("The total travel time, based upon the selected criteria, is {:,} ".format(total_time) + "seconds.") 
-    
+
+    print("The total travel time, based upon the selected criteria, is {:,} ".format(total_time) + "seconds.")
+
     # NOTE: convert the many seconds into more readable years, days, hours, minutes and seconds - use divmod, iteratively, to produce a quotient and a remainder
     minute,second = divmod(total_time, 60)
     hour,minute = divmod(minute, 60)
     day,hour = divmod(hour, 24)
     year,day = divmod(day, 365)
-    
+
     print("This total travel time equals: {:.0f} year(s) : {:.0f} day(s) : {:.0f} hour(s) : {:.0f} minute(s) : {:.0f} second(s)".format(year,day,hour,minute,second))
 
     # TO DO: display mean travel time
@@ -202,9 +203,9 @@ def trip_duration_stats(df):
     mean_travel_time = df['Trip Duration'].mean()
     # NOTE: Round the mean travel time to nearest integer to avoid partial seconds clutter
     mean_travel_time = round(mean_travel_time)
-        
+
     print("\nThe mean travel time, based upon the selcted criteria, is: " + str(mean_travel_time) + " seconds")
-    
+
     # NOTE: convert seconds to hrs, mins, sec
     minute,second = divmod(mean_travel_time, 60)
     hour,minute = divmod(minute, 60)
@@ -236,7 +237,7 @@ def bikeshare_users(df):
 def gender_stats(df, city):
 
     start_time = time.time()
-    
+
     try:
         gender_counts = df['Gender'].value_counts(dropna=False)
         print("\nThe gender counts, based upon the seleced criteria:\n" + str(gender_counts))
@@ -244,16 +245,16 @@ def gender_stats(df, city):
     except:
 
         print('\nThere is no gender data in the source "{}.csv" file.'.format(city))
-        
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 
     # TO DO: Display earliest, most recent, and most common year of birth.  Added median birth year to test this python capability and to see this stat
-    
+
     start_time = time.time()
     try:
-    
+
         earliest_birth_year = df['Birth Year'].min()
         most_recent_birth_year = df['Birth Year'].max()
         most_common_birth_year = df['Birth Year'].mode()[0]
@@ -285,7 +286,7 @@ def main():
         user_stats(df, city)
         bikeshare_users(df)
         gender_stats(df, city)
-        
+
         # NOTE: not modifying original restart code, as it is performing well
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
