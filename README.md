@@ -16,7 +16,7 @@ Bikeshare - Project 2 for Udacity Data Science Using Python Class
 
 ###
 
-  Python code displays Bikeshare statistics based upon selections prompted from end-users.  These prompts and selections include:
+*Python code displays Bikeshare statistics based upon selections prompted from end-users.  These prompts and selections include:*
 ###
 
 - The city to query and report
@@ -25,7 +25,7 @@ Bikeshare - Project 2 for Udacity Data Science Using Python Class
 
 ###
 
-  The statistics displayed, where applicable, are:
+*The statistics displayed, where applicable, are:*
 ###
 
   - Most Common Month
@@ -43,7 +43,7 @@ Bikeshare - Project 2 for Udacity Data Science Using Python Class
   - Count by User Type
 ###
 
-  ...and, if the source data is available, report:
+*...and, if the source data is available, report:*
 ###
 
   - Count by Gender
@@ -72,6 +72,6 @@ The python logic reads the source bikeshare data contained in the following file
 
 ###
 
-##**CREDITS:**
+## **CREDITS:**
 
 This README,md file was built using the information available at: [Github Basic Writing and Formatting Syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
