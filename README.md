@@ -54,7 +54,7 @@ Bikeshare - Project 2 for Udacity Data Science Using Python Class
 
 ###
 
-**Files Used:**
+## **Files Used:**
 
 ####
 
@@ -72,6 +72,6 @@ The python logic reads the source bikeshare data contained in the following file
 
 ###
 
-## **CREDITS:**
+## **Credits:**
 
 This *README.md* file was built using trial and error and using the information available at: [Github Basic Writing and Formatting Syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
