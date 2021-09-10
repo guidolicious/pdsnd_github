@@ -6,61 +6,66 @@
 
 ## **Project:**
 
-Bikeshare
+Bikeshare - Project 2 for Udacity Data Science Using Python Class
 
-## **SUMMARY:**
+## **Summary:**
 
 Python code displays Bikeshare statistics based upon selections prompted from end-users.  These prompts and selections include:
 
 ###
 
-The city to query and report
-The month to query and report
-The day of the week to query and report
+- The city to query and report
+- The month to query and report
+- The day of the week to query and report
 
 The statistics displayed, where applicable, are:
 ###
 
-  Most Common Month
-  Most Common Day of Week
-  Most Common Start Hour
+  - Most Common Month
+  - Most Common Day of Week
+  - Most Common Start Hour
 ###
 
-  Most Common Start Station
-  Most Common End Station
-  Most Common Combination of Start and End Station
+  - Most Common Start Station
+  - Most Common End Station
+  - Most Common Combination of Start and End Station
 ###
 
-  Total Travel Time
-  Mean Travel Time
-  Count by User Type
+  - Total Travel Time
+  - Mean Travel Time
+  - Count by User Type
 ###
 
 ...and, if available, report:
 ###
 
-  Count by Gender
-  Earliest Birth Year
-  Most Recent Birth Year
-  Most Common Birth Year
-  Median Birth Year (bonus statistic)
+  - Count by Gender
+  - Earliest Birth Year
+  - Most Recent Birth Year
+  - Most Common Birth Year
+  - Median Birth Year (bonus statistic)
 
 ##
 
-**FILES USED:**
+**Files Used:**
 
 ###
 
-*bikeshare.py*
+- *bikeshare.py*
 ###
 
 The python logic reads the source bikeshare data contained in the following files:
 ####
 
-*chicago.csv*, *new york city.csv*, *washington.csv*
+- *chicago.csv*
+- *new york city.csv*
+- *washington.csv*
 
 #### **These .csv files _will not be pushed to GitHub_ due to their size**
 
 ##
 
-CREDITS: This README,md file was built using the information available at: [Github Basic Writing and Formatting Syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+**CREDITS:**
+###
+
+This README,md file was built using the information available at: [Github Basic Writing and Formatting Syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
