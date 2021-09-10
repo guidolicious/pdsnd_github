@@ -76,7 +76,7 @@ This *README.md* file was built using trial and error, and using the information
 
 *bikeshare.py* was built using trial and error, and by using:
 
-- The Mentor help on [Udacity Mentor Help](https://knowledge.udacity.com) to address a recurring tz error.
+- [Udacity Mentor Help](https://knowledge.udacity.com) to address a recurring tz error.
 - [stackoverflow.com](https://stackoverflow.com/questions/5513615/add-decimal-mark-thousands-separators-to-a-number) to learn how to add a thousands separator (comma) to a number.
 - Read sections on Lists and Dataframes within Eric Matthes' *"Python Crash Course - 2nd Edition"* for general guidance.
 - Examined *pandas.pydata.org* website to learn how to access a group of rows/columns, via the *DataFrame.loc* command.  This resolved recurring issues with the day_of_week dataframe.
