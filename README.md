@@ -40,7 +40,7 @@ The statistics displayed, where applicable, are:
   - Count by User Type
 ###
 
-...and, if available, report:
+...and, if the source data is available, report:
 ###
 
   - Count by Gender
