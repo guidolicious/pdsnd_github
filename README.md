@@ -72,4 +72,11 @@ The python logic reads the source bikeshare data contained in the following file
 
 ## **Credits:**
 
-This *README.md* file was built using trial and error and using the information available at: [Github Basic Writing and Formatting Syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+This *README.md* file was built using trial and error, and using the information available at: [Github Basic Writing and Formatting Syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
+*bikeshare.py* was built using trial and error, and by using:
+
+- The Mentor help on *udacity.com* to address a recurring tz error.
+- *stackoverflow.com* to learn how to add a thousands separator to a number.
+- Read sections on Lists and Dataframes within Eric Matthes' *"Python Crash Course - 2nd Edition"* for general guidance.
+- Examined *pandas.pydata.org* website to learn how to access a group of rows/columns, via the *DataFrame.loc* command.  This resolved recurring issues with the day_of_week dataframe.
