@@ -4,9 +4,13 @@
 
 9/10/2021
 
+###
+
 ## **Project:**
 
 Bikeshare - Project 2 for Udacity Data Science Using Python Class
+
+###
 
 ## **Summary:**
 
@@ -45,14 +49,14 @@ The statistics displayed, where applicable, are:
   - Most Common Birth Year
   - Median Birth Year (bonus statistic)
 
-##
+###
 
 **Files Used:**
 
-###
+####
 
 - *bikeshare.py*
-###
+####
 
 The python logic reads the source bikeshare data contained in the following files:
 ####
@@ -61,9 +65,9 @@ The python logic reads the source bikeshare data contained in the following file
 - *new york city.csv*
 - *washington.csv*
 
-#### **These .csv files _will not be pushed to GitHub_ due to their size**
+**Note: These .csv source data files _will not be pushed to GitHub_ due to their size**
 
-##
+###
 
 **CREDITS:**
 #####
