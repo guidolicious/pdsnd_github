@@ -260,11 +260,14 @@ def gender_stats(df, city):
         most_common_birth_year = df['Birth Year'].mode()[0]
         # NOTE: add Median Birth Year as a new statistic
         median_birth_year = df['Birth Year'].median()
+        # NOTE: add Mean Birth Year as a new statistic
+        mean_birth_year = df['Birth Year'].mean()
 
         print('\nEarliest birth year, based upon the selected criteria, is: {:.0f}'.format(earliest_birth_year))
         print('Most recent birth year, based upon the selected criteria, is: {:.0f}'.format(most_recent_birth_year))
         print('Most common birth year, based upon the selected criteria, is: {:.0f}'.format(most_common_birth_year))
         print('BONUS: Median birth year, based upon the selected criteria, is: {:.0f}'.format(median_birth_year))
+        print('BONUS Refector Code: Mean birth year, based upon the selected criteria, is: {:.0f}'.format(mean_birth_year))
 
     # NOTE: There is no Birth Year within the washington.csv file - need to print an exception when washington chosen
 
